@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="section-home">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="main-content">
+                <form>
+                    <input type="text" name="productName" placeholder="Nhập tên hàng..." class="input-text" />
+                    <p class="text-danger error" id="productName-error">Tên hàng không được để trống!</p>
+                    <input type="text" name="address" placeholder="Nhập địa chỉ..." class="input-text" />
+                    <p class="text-danger error" id="address-error">Địa chỉ không được để trống!</p>
+                    <input type="text" name="area" placeholder="Nhập khu vực..." class="input-text" />
+                    <p class="text-danger error" id="area-error">Khu vực không được để trống!</p>
+                    <input type="text" name="fullName" placeholder="Nhập tên..." class="input-text" />
+                    <p class="text-danger error" id="fullname-error">Tên không được để trống!</p>
+                    <input type="text" name="phoneNumber" placeholder="Nhập số điện thoại..." class="input-text" />
+                    <p class="text-danger error" id="phone-error">Số điện thoại không được để trống!</p>
+                    <div class="transfer-owner">
+                        <label>Đơn vị vận chuyển</label>
+                        <select>
+                            <option>Chọn đơn vị ></option>
+                        </select>
+                    </div>
+                    <div class="payment-method">
+                        <label>Hình thức thanh toán</label>
+                        <input type="radio" id="cod" name="payment" value="0" />
+                        <label for="cod">Khi nhận hàng</label>
+                        <input type="radio" id="card" name="payment" value="1" />
+                        <label for="card">Bằng thẻ</label>
+                    </div>
+                    <input type="text" name="note" placeholder="Ghi chú..." class="input-text" />
+                    <p>Phải trả: <span class="total">0 đ</span></p>
+                    <button type="submit" class="btn btn-confirm">Xác nhận</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="img-wrapper">
+                <img src="~/imgs/oto.png" class="home-img" />
+            </div>
+        </div>
+    </div>
+</section>

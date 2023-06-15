@@ -1,0 +1,31 @@
+﻿@model WebGiaoHangMVC.Models.Enities.User
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<section class="register-section">
+    <div>
+        <form class="login-form" id="registerForm" asp-controller="Login" asp-action="Register" method="post">
+            <h3>Đăng ký</h3>
+            <input type="text" name="fullName" id="fullName" placeholder="Nhập họ tên..." class="input-text" />
+            <p class="text-danger error" id="fullname-error">Tên không được để trống!</p>
+            <input type="text" name="username" id="username" placeholder="Nhập tên đăng nhập..." class="input-text" />
+            <p class="text-danger error" id="username-error">Tên đăng nhập không được để trống!</p>
+            <input type="password" name="password" id="password" placeholder="Nhập mật khẩu..." class="input-text" />
+            <p class="text-danger error" id="password-error">Mật khẩu không được để trống!</p>
+            <input type="password" name="cfpassword" id="cfpassword" placeholder="Nhập lại mật khẩu..." class="input-text" />
+            <p class="text-danger error" id="cfpassword-error">Mật khẩu không khớp!</p>
+            <input type="date" class="input-text" id="date" name="doB" />
+            <p class="text-danger error" id="date-error">Chưa nhập ngày sinh!</p>
+            <input type="text" name="email" id="email" placeholder="Nhập email..." class="input-text" />
+            <p class="text-danger error" id="email-error">Email không hợp lệ!</p>
+            <input type="text" name="phoneNumber" id="phone" placeholder="Nhập số điện thoại..." class="input-text" />
+            <p class="text-danger error" id="phone-error">Số điện thoại không được để trống!</p>
+            <div class="action">
+                <button class="btn btn-login" type="submit">Đăng ký</button>
+            </div>
+        </form>
+    </div>
+</section>
+
