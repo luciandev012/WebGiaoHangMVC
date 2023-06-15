@@ -15,10 +15,13 @@ namespace WebGiaoHangMVC.Models
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<User>().ToTable("User").HasKey(u => u.Id);
+
+            builder.Entity<Product>().ToTable("Product").HasKey(u => u.Id);
 
             builder.Entity<User>().HasData(new User
             {

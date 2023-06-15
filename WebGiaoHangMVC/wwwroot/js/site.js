@@ -107,6 +107,30 @@ $(document).ready(function () {
             $('#phone-error').css("visibility", "hidden");
         }
     });
+    $('#productForm').on('submit', function (e) {
+        e.preventDefault();
+
+        var productName = $('input[name=productName]').val();
+        var address = $('input[name=address]').val();
+        var area = $('input[name=area]').val();
+        var phone = $('input[name=phoneNumber]').val();
+
+        if (productName === "") {
+            $('#productName-error').css("visibility", "visible");
+        }
+        if (address === "") {
+            $('#address-error').css("visibility", "visible");
+        }
+        if (area === "") {
+            $('#area-error').css("visibility", "visible");
+        }
+        if (!validatePhone(phone)) {
+            $('#phone-error').css("visibility", "visible");
+        }
+        if (productName !== "" && address !== "" && area !== "" && validatePhone(phone)) {
+            this.submit();
+        }
+    })
 });
 
 const validateEmail = (email) => {
@@ -116,3 +140,7 @@ const validateEmail = (email) => {
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
 };
+
+const validatePhone = (phone) => {
+    return String(phone).toLowerCase().match(/^0{1}[0-9]{9}$/);
+}

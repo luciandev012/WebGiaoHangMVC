@@ -30,7 +30,15 @@ a {
 
 select {
     -webkit-appearance: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #48cae4;
+    outline: none;
 }
+
+    select:active {
+        border: 1px solid #48cae4;
+    }
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -122,6 +130,10 @@ body {
     color: #fff;
 }
 
+.text-in-btn {
+    color: #fff;
+}
+
 .text-in-btn:hover {
     text-decoration: none;
 }
@@ -168,4 +180,54 @@ input {
     visibility: hidden;
     transition: all 0.2s;
     font-size: 0.8rem;
+}
+.mb-small {
+    margin-bottom: 1rem;
+}
+.btn-confirm {
+    background-color: #2596be;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+.total {
+    color: red;
+}
+.main-content {
+    background-color: #2596be;
+    color: #fff;
+    height: 437px;
+    padding-top: 25%;
+    padding-left: 2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    display: inline-block;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+}
+.item-active {
+    border-bottom: 5px solid #A7ECEE;
+}
+.tracking-input {
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+.help-text {
+    margin-top: 1rem;
+}
+.btn-tracking {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: #ffff81;
+    border-radius: 25px;
+    padding: 10px 25px;
+    margin-left: 2rem;
 }
